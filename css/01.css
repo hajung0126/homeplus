@@ -879,8 +879,8 @@ body {
 
 /* 개인정보방침 */
 .footer .content .top {
-    background-color: #C7C7C7;
-    color: #FDFDFD;
+    background-color: #d0d2d7;
+    color: #303030;
     display: inline-block;
     /* 내용 크기에 맞게 박스 크기 조절 */
     padding: 30px;
