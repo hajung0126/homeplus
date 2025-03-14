@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>홈플러스</title>
+    <link rel="stylesheet" href="css/01.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".main1_Swiper", {
+                loop: true,
+                slidesPerView: 2,/* (슬라이드뷰의 수가 더 크면 안됨. 무조건 한개 이상 많아야함 n+1) */
+                spaceBetween: 26,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,/* 클릭적용여부 */
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: { /* 자동넘어가기만 하고싶을때 복사하는 스크립트 */
+                    delay: 3500, /* 2500=2.5초뒤에 넘어감 */
+                    disableOnInteraction: false, /* 드래그를 했을때 멈추게 할것인가? 안할래 */
+                },
+            });
+
+            var swiper = new Swiper(".main2_Swiper", {
+                loop: true,
+                slidesPerView: 2,/* (슬라이드뷰의 수가 더 크면 안됨. 무조건 한개 이상 많아야함 n+1) */
+                spaceBetween: 26,
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                autoplay: { /* 자동넘어가기만 하고싶을때 복사하는 스크립트 */
+                    delay: 2500, /* 2500=2.5초뒤에 넘어감 */
+                    disableOnInteraction: false, /* 드래그를 했을때 멈추게 할것인가? 안할래 */
+                },
+            }); //script 2 end
+        }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 700;
+            font-display: swap;
+            src: local('Pretendard Bold'), url(./woff2/Pretendard-Bold.woff2) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 600;
+            font-display: swap;
+            src: local('Pretendard SemiBold'), url(./woff2/Pretendard-SemiBold.woff2) format('woff2'), url(./woff/Pretendard-SemiBold.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Pretendard';
+            font-weight: 400;
+            font-display: swap;
+            src: local('Pretendard Regular'), url(./woff2/Pretendard-Regular.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_inner">
+                <div class="top-01">
+                    <ul>
+                        <li>로그인/회원가입</li>
+                        <li>주문배송</li>
+                        <li>고객센터</li>
+                    </ul>
+                </div> <!-- top-01 end -->
+
+                <div class="top-02">
+                    <h1 class="logo">
+                        <img src="img/홈플러스_로고.png" alt="로고">
+                    </h1> <!-- logo end -->
+
+                    <div class="search_wrap">
+                        <ul>
+                            <li class="search">
+                                <input type="text"> <!-- 단독태그여서 /꼭쓰기 -->
+                                <img src="img/검색.png" alt="검색하기">
+                            </li> <!-- search end -->
+                        </ul>
+                    </div> <!-- search_wrap end -->
+
+                    <div class="icon_wrap">
+                        <ul>
+                            <li>
+                                <img src="img/자주구매.png" alt="자주구매">
+                                <span>자주구매</span>
+                            </li>
+                            <li>
+                                <img src="img/마이페이지.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </li>
+                            <li>
+                                <img src="img/장바구니.png" alt="장바구니">
+                                <span>장바구니</span>
+                            </li>
+                        </ul>
+                    </div><!-- icon_wrap end -->
+
+                </div> <!-- top-02 end -->
+            </div> <!-- header_inner end -->
+
+            <div class="header_nav">
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li class="menu_btn">
+                            <img src="img/전체메뉴.png" alt="">
+                        </li><!-- menu_btn end -->
+
+                        <li><a href="#">전체 카테고리</a></li>
+                        <li><a href="#">홈플런</a></li>
+                        <li><a href="#">신상품</a></li>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">택배배송</a></li>
+                        <li><a href="#">주류이지픽업</a></li>
+                        <li><a href="#">기획전</a></li>
+                        <li><a href="#">이벤트/쿠폰</a></li>
+                    </ul> <!-- gnb end -->
+                </nav> <!-- nav end -->
+            </div><!-- header_nav end -->
+        </header> <!-- .header end -->
+
+        <main class="perview">
+            <!-- Swiper -->
+            <div class="swiper main1_Swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼1.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼2.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼3.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼4.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼5.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼6.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/메인비주얼7.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+                </div><!-- swiper-wrapper end -->
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
+            </div> <!-- swiper mySwiper end -->
+        </main><!-- preview end -->
+
+
+        <section class="section-01">
+            <div class="Q-menu_wrap"> <!-- 아이템 전체영역 설정 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/홈플런슈퍼세일.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>홈플러스 슈퍼세일</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 1 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/스낵10+5.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>스낵 10+5</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 2 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/몽블랑제.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>몽블랑제 베이커리</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 3 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/델리,밀키트.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>델리/밀키트</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 4 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/심플러스.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>심플러스</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 5 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/1+1.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>하나 더!</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 6 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/와인,위스키.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>와인/위스키</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 7 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/주방용품.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>주방용품 할인</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 8 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/즉시배송.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>1시간 내외 도착</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 9 -->
+
+                <div class="Q-menu">
+                    <a href="#" target="_blank">
+                        <div class="image_box">
+                            <img src="img/쿠폰.png" alt="">
+                        </div> <!-- image_box end -->
+                        <div class="text">
+                            <h4>이벤트/쿠폰</h4>
+                        </div> <!-- text end -->
+                    </a>
+                </div><!-- Q-menu end 10 -->
+            </div><!-- Q-menu_wrap end -->
+        </section><!-- section-01 end -->
+
+
+        <section class="section-02">
+            <!-- Swiper -->
+            <div class="swiper main2_Swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트2.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트3.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트4.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트5.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트6.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트7.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트8.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/이벤트9.png" alt="">
+                        </div><!-- image end -->
+                    </div><!-- swipe-slide end -->
+                </div><!-- swiper-wrapper end -->
+
+                <div class="swiper-pagination"></div>
+            </div> <!-- swiper mySwiper end -->
+        </section><!-- section-02 end -->
+
+        <section class="section-03">
+            <a href="#" target="_blank">
+                <div class="image_box">
+                    <div class="image">
+                        <img src="img/홈플런배너.png" alt="">
+                    </div><!-- image end -->
+                    <div class="text">
+                        <h2>조기품절 가능 / 점포별 가격 / 취급상품 상이<br>03.06(목) ~ 03.12(수)</h2>
+                    </div><!-- text end -->
+                </div><!-- image_box end -->
+            </a>
+        </section><!-- section-03 end -->
+
+
+        <section class="section-04">
+            <div class="btn">
+                <h1>최대 50% 할인</h1>
+                <ul class="menu">
+                    <li>축산</li>
+                    <li>과일/채소</li>
+                    <li>햄/어묵</li>
+                </ul>
+            </div><!-- btn end -->
+            <div class="item_wrap">
+                <div class="item">
+                    <img src="img/무항생제삼겹살.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>무항생제 돼지 삼겹살 구이용 500g</p>
+                        <h5>19,980원</h5> <!-- 할인전 -->
+                        <div class="price">
+                            <h4>50%</h4>
+                            <strong>9,900원</strong> <!-- 할인후 -->
+                        </div> <!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-1 -->
+                <div class="item">
+                    <img src="img/무항생제목심.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>무항생제 돼지 목심 구이용 500g</p>
+                        <h5>19,980원</h5>
+                        <div class="price">
+                            <h4>50%</h4>
+                            <strong>9,900원</strong>
+                        </div> <!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-2 -->
+                <div class="item">
+                    <img src="img/캐나다산보먹돼삼겹살.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>캐나다산 보먹돼 삼겹살 1kg</p>
+                        <h5>25,900원</h5>
+                        <div class="price">
+                            <h4>46%</h4>
+                            <strong>13,900원</strong>
+                        </div> <!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-3 -->
+                <div class="item">
+                    <img src="img/캐나다산보먹돼목심.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>캐나다산 보먹돼 목심 1kg</p>
+                        <h5>25,900원</h5>
+                        <div class="price">
+                            <h4>46%</h4>
+                            <strong>13,900원</strong>
+                        </div> <!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-4 -->
+                <div class="item">
+                    <img src="img/시즈닝부채살 스테이크.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>시즈닝 부채살 스테이크 기획팩(180g*2입)</p>
+                        <h5>21,650원</h5>
+                        <div class="price">
+                            <h4>40%</h4>
+                            <strong>12,990원</strong>
+                        </div> <!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-5 -->
+                <div class="item">
+                    <img src="img/양념소불고기.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>부드러운 양념 소불고기 600g</p>
+                        <h5>17,900원</h5>
+                        <div class="price">
+                            <h4>50%</h4>
+                            <strong>8,950원</strong>
+                        </div><!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-6 -->
+                <div class="item">
+                    <img src="img/호주산토시살.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>호주산 토시살 구이용 300g</p>
+                        <h5>15,900원</h5>
+                        <div class="price">
+                            <h4>40%</h4>
+                            <strong>9,540원</strong>
+                        </div> <!-- price end -->
+                    </div> <!-- text end -->
+                </div><!-- item end-7 -->
+                <div class="item">
+                    <img src="img/호주산안창살.jpg" alt="">
+                    <ul class="inform">
+                        <li>행사상품</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>호주산 안창살 구이용 300g</p>
+                        <h5>15,900원</h5>
+                        <div class="price">
+                            <h4>40%</h4>
+                            <strong>9,540원</strong>
+                        </div><!-- price end -->
+                    </div> <!--text end-->
+                </div><!-- item end-8 -->
+            </div> <!-- item_wrap end -->
+            <div class="button_box">
+                <div class="button">
+                    <a href="#">전체 상품 보기 ></a>
+                </div> <!-- button end -->
+            </div><!-- button_box end -->
+        </section> <!-- section-04 end -->
+
+
+        <section class="section-05">
+            <div class="btn">
+                <h1>지금 사면 하나 더!</h1>
+                <ul class="menu">
+                    <li>가공식품</li>
+                    <li>음료</li>
+                    <li>생활용품</li>
+                </ul>
+            </div><!-- btn end -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <img src="img/동원참치액.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>동원 참치액 진 500g</p>
+                        <strong>7,900원</strong> <!-- 가격 -->
+                        <h5>100g당 1,598원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-1 -->
+
+                <div class="item">
+                    <img src="img/사조참치액.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>사조 참치액 500g</p>
+                        <strong>7,900원</strong> <!-- 가격 -->
+                        <h5>100g당 1,598원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-2 -->
+
+                <div class="item">
+                    <img src="img/오뚜기참기름.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>오뚜기 옛날 참기름 500ml</p>
+                        <strong>14,900원</strong> <!-- 가격 -->
+                        <h5>10ml당 300원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-3 -->
+
+                <div class="item">
+                    <img src="img/동원골뱅이.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>동원 자연산 골뱅이 300g</p>
+                        <strong>6,900원</strong> <!-- 가격 -->
+                        <h5>10g당 233원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-4 -->
+
+                <div class="item">
+                    <img src="img/풀무원순두부양념.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>풀무원 순두부찌개 양념 140g</p>
+                        <strong>2,590원</strong> <!-- 가격 -->
+                        <h5>100g당 1,850원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-5 -->
+
+                <div class="item">
+                    <img src="img/풀무원마파두부.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>풀무원 중화 마파두부 양념 130g</p>
+                        <strong>2,590원</strong> <!-- 가격 -->
+                        <h5>100g당 1,922원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-6 -->
+
+                <div class="item">
+                    <img src="img/풀무원유부초밥.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>풀무원 고소한 유부초밥 330g</p>
+                        <strong>5,900원</strong> <!-- 가격 -->
+                        <h5>100g당 1,815원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-7 -->
+
+                <div class="item">
+                    <img src="img/동원유부초밥.png" alt="">
+                    <ul class="inform">
+                        <li>1 + 1</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>동원 롤 유부초밥 새콤한 맛 254g</p>
+                        <strong>6,900원</strong> <!-- 가격 -->
+                        <h5>10g당 2,752원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-8 -->
+            </div> <!-- item_wrap end -->
+
+            <div class="button_box">
+                <div class="button">
+                    <a href="#">전체 상품 보기 ></a>
+                </div> <!-- button end -->
+            </div><!-- button_box end -->
+        </section> <!-- section-05 end -->
+
+        <section class="section-06">
+            <div class="text">
+                <h1>홈플러스 ONLY</h1>
+            </div><!-- text end -->
+            <div class="image">
+                <img src="img/홈플러스_심플러스.png" alt="">
+                <img src="img/물가안정.png" alt="">
+            </div><!-- image end -->
+        </section><!-- section-06 end -->
+
+        <section class="section-07">
+            <div class="btn">
+                <h1>3개 구매시 9,900원</h1>
+                <ul class="menu">
+                    <li>인기과자</li>
+                    <li>봉지라면</li>
+                </ul>
+            </div><!-- btn end -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <img src="img/빈츠.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>롯데 빈츠 204g</p>
+                        <strong>5,490원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-1 -->
+
+                <div class="item">
+                    <img src="img/예감.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>오리온 예감 오리지날 192g</p>
+                        <strong>4,390원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-2 -->
+
+                <div class="item">
+                    <img src="img/에이스.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>해태 에이스 364g</p>
+                        <strong>4,900원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-3 -->
+
+                <div class="item">
+                    <img src="img/맛동산.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>해태 맛동산 300g</p>
+                        <strong>4,590원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-4 -->
+
+                <div class="item">
+                    <img src="img/몽쉘.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>롯데 몽쉘 크림케이크 408g</p>
+                        <strong>5,590원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-5 -->
+
+                <div class="item">
+                    <img src="img/쿠크다스.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>크라운 쿠크다스 화이트 289g</p>
+                        <strong>4,490원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-6 -->
+
+                <div class="item">
+                    <img src="img/촉촉한 초코칩.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>오리온 촉촉한 초코칩 320g</p>
+                        <strong>4,690원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-7 -->
+
+                <div class="item">
+                    <img src="img/달고나쿠키.png" alt="">
+                    <ul class="inform">
+                        <li>함께할인</li>
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <div class="text">
+                        <p>오징어게임 달고나 쿠키 144g</p>
+                        <strong>5,290원</strong> <!-- 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-8 -->
+            </div> <!-- item_wrap end -->
+
+            <div class="button_box">
+                <div class="button">
+                    <a href="#">전체 상품 보기 ></a>
+                </div> <!-- button end -->
+            </div><!-- button_box end -->
+        </section><!-- section-07 end -->
+
+        <section class="section-08">
+            <div class="btn">
+                <h1>알뜰 장보기</h1>
+                <ul class="menu">
+                    <li>소용량</li>
+                    <li>라스트 찬스</li>
+                </ul>
+            </div><!-- btn end -->
+
+            <div class="item_wrap">
+                <div class="item">
+                    <img src="img/파프리카샐러드.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>파프리카 샐러드 100g(팩)</p>
+                    </div> <!-- text1 end -->
+                    <div class="text2">
+                        <strong>1,990원</strong> <!-- 가격 -->
+                        <h5>100g당 1,990원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text2 end -->
+                </div><!-- item end-1 -->
+
+                <div class="item">
+                    <img src="img/감자.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>하우스 감자(국산/1개)</p>
+                    </div> <!-- text1 end -->
+                    <div class="text2">
+                        <strong>1,990원</strong> <!-- 가격 -->
+                        <h5>1개당 1,990원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text2 end -->
+
+                </div><!-- item end-2 -->
+
+                <div class="item">
+                    <img src="img/홍고추.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>홍고추(소/봉)</p>
+                    </div> <!-- text1 end -->
+                    <div class="text2">
+                        <strong>2,490원</strong> <!-- 가격 -->
+                        <h5>1개당 2,490원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text2 end -->
+                </div><!-- item end-3 -->
+
+                <div class="item">
+                    <img src="img/한끼케일.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>한끼신선 케일(봉)</p>
+                    </div> <!-- text1 end -->
+                    <div class="text2">
+                        <strong>1,990원</strong> <!-- 가격 -->
+                        <h5>1개당 1,990원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text2 end -->
+                </div><!-- item end-4 -->
+
+                <div class="item">
+                    <img src="img/깐마늘.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>한끼신선 깐마늘(봉)</p>
+                    </div> <!-- text1 end -->
+                    <div class="text2">
+                        <strong>1,490원</strong> <!-- 가격 -->
+                        <h5>1개당 1,490원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text2 end -->
+                </div><!-- item end-5 -->
+
+                <div class="item">
+                    <img src="img/양파.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>깐 양파(팩)</p>
+                    </div><!-- text1 end -->
+                    <div class="text2">
+                        <strong>3,790원</strong> <!-- 가격 -->
+                        <h5>100g당 785원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text2 end -->
+                </div><!-- item end-6 -->
+
+                <div class="item">
+                    <img src="img/대파.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>한끼신선 간편 대파(봉)</p>
+                    </div>
+                    <div class="text2">
+                        <strong>2,490원</strong> <!-- 가격 -->
+                        <h5>1개당 2,490원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-7 -->
+
+                <div class="item">
+                    <img src="img/무.png" alt="">
+                    <ul class="inform">
+                        <li>즉시배송</li>
+                    </ul><!-- inform end -->
+                    <hr style="height: 1px; background-color: #C7C7C7; border: none;">
+                    <div class="text1">
+                        <p>한끼신선 컷팅무(개)</p>
+                    </div>
+                    <div class="text2">
+                        <strong>1,490원</strong> <!-- 가격 -->
+                        <h5>1개당 1,490원</h5> <!-- 100g당 가격 -->
+                    </div> <!-- text end -->
+                </div><!-- item end-8 -->
+            </div> <!-- item_wrap end -->
+
+            <div class="button_box">
+                <div class="button">
+                    <a href="#">전체 상품 보기 ></a>
+                </div> <!-- button end -->
+            </div><!-- button_box end -->
+        </section><!-- section-08 end -->
+
+        <footer class="footer">
+            <div class="content">
+                <div class="top">
+                    <div class="left">
+                        <p>공지사항 | 이용약관 | <b>개인정보처리방침</b> | 청소년 보호정책 | 입점·제휴문의 | 고객의견함 | 인재채용 | 불법상품 신고 |
+                            <b>소비자피해보상보험</b>
+                        </p>
+                    </div><!-- left end -->
+                    <div class="right">
+                        <p>Family Site</p>
+                    </div><!-- right end -->
+                </div><!-- top-end -->
+            </div><!-- content end -->
+
+            <div class="footer_wrap">
+                <div class="mid">
+                    <div class="left">
+                        <div class="name">
+                            <h4>홈플러스 주식회사</h4>
+                        </div><!-- name end -->
+                        <div class="text_wrap">
+                            <ul class="text1">
+                                <li>대표이사 : 조주연</li>
+                                <li>주소 : 서울특별시 강서구 화곡로 398(등촌동)</li>
+                            </ul><!-- text1 end -->
+                            <ul class="text2">
+                                <li>사업자등록번호 : 220-81-60348</li>
+                                <li>통신판매신고번호 : 2016-서울강서-0451호</li>
+                                <li><a href="#">사업자 정보확인</a></li>
+                            </ul><!-- text2 end -->
+                            <ul class="text3">
+                                <li>Copyright © Homeplus Co., LTD. All Rights Reserved.</li>
+                            </ul><!-- text3 end -->
+                        </div><!-- text_wrap end -->
+                    </div><!-- left end -->
+
+                    <div class="right">
+                        <div class="title">
+                            <h4>고객센터 1577-3355</h4>
+                        </div><!-- title end -->
+                        <ul class="text1">
+                            <li>업무시간 : 09 ~ 22시 (명절당일 휴무)</li>
+                            <li>Email : onlinemart@homeplus.co.kr</li>
+                        </ul><!-- text1 end -->
+                    </div><!-- right end -->
+                </div><!-- mid-end -->
+
+                <div class="end">
+                    <img src="img/푸터1.png" alt="">
+                </div> <!-- end-end -->
+            </div><!-- footer_wrap end -->
+        </footer>
+    </div> <!-- wrap end --> <!-- 제일 끝 -->
+</body>
+
+</html>
