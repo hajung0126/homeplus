@@ -21,7 +21,7 @@ button {
 }
 
 body {
-    min-width: 1600px;
+    min-width: 1500px;
 }
 
 .wrap {
@@ -238,24 +238,20 @@ body {
     position: relative;
 }
 
-.section-02 .swiper-slide .image {
-    width: 670px;
-    height: 100%
+.section-02 .swiper-slide {
+    width: 100%;
 }
-
 .section-02 .swiper-slide .image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
-.section-02 .swiper-pagination {
+/* .section-02 .swiper-pagination {
     position: static;
     margin-top: 10px;
     font-size: 18px;
     text-align: center;
     color: #434343;
-}
+} */
 
 
 /* 세션-03 홈플런 배너*/
